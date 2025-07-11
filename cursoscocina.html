@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursos de cocina</title>
+  <link rel="stylesheet" href="stylefoodcam.css"/>
 </head>
+
 <body>
-  
+
+  <header>
+    <h1>BIENVENIDO A COOKING COURSES</h1>
+  </header>
+
+  <main>
+    <div id="cardContainer" class="grid-container">
+
+      <div class="card">
+        <img src="https://media.slidesgo.com/storage/21467884/conversions/0-fast-food-digital-menu-board-thumb.jpg"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Rápida</p>
+        <p class="subtitle">🍕 Aprende a preparar Pizza</p>
+        <p class="subtitle">🍔 Técnicas para preparar Hamburguesas</p>
+        <p class="subtitle">🍟 Papas fritas crocantes</p>
+        <p class="price">💵 $29.99</p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://img.freepik.com/vector-premium/comida-mexicana-borde-horizontal-costuras-platos-tradicionales-latinoamericanos-sobre-fondo-negro_248911-1590.jpg"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Mexicana</p>
+        <p class="subtitle">🌮 Aprende a preparar Tacos</p>
+        <p class="subtitle">🌯 Técnicas para preparar Burritos</p>
+        <p class="subtitle">🥑 Receta para preparar Guacamole</p>
+        <p class="price">💵 $59.99</p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/horizontal-fast-food-design-vintage-260nw-1166136202.jpg"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Italiana</p>
+        <p class="subtitle">🍝 Aprende a preparar Pasta</p>
+        <p class="subtitle">🍕 Técnicas para preparar Calzone</p>
+        <p class="subtitle">🥗 Receta para preparar Ensalada Caprese</p>
+        <p class="price">💵 $99.99</p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://png.pngtree.com/png-clipart/20230813/original/pngtree-restaurant-menu-featuring-american-cuisine-on-a-white-wooden-table-top-png-image_10338186.png"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Americana</p>
+        <p class="subtitle">🍗 Aprende a preparar Alitas</p>
+        <p class="subtitle">🍔 Técnicas para preparar Hamburguesas Dobles</p>
+        <p class="subtitle">🥤 Aprende a hacer Jugos, Milkshakes o Cocteles</p>
+        <p class="price">💵 $79.99</p>
+      </div>
+
+      <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/vegan-organic-food-restaurant-menu-260nw-380472238.jpg"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Vegetariana</p>
+        <p class="subtitle">🥙 Aprende a preparar Falafel</p>
+        <p class="subtitle">🥗 Técnicas para preparar Ensalada griega</p>
+        <p class="subtitle">🧃 Aprende a preparar Jugos o Zumos naturales</p>
+        <p class="price">💵 $49.99</p>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://img.freepik.com/vector-premium/banner-comida-asiatica-primer-plano-plato-oriental-tradicional-plantas-sushi-restaurante-vector_653547-617.jpg"
+          alt="Curso Comida Rápida">
+        <p>Curso de Comida Asiática</p>
+        <p class="subtitle">🍜 Aprende a preparar Ramen</p>
+        <p class="subtitle">🍣 Técnicas para preparar Sushi</p>
+        <p class="subtitle">🥟 Recetas para preprar empanadas Gyozas</p>
+        <p class="price">💵 $114.99</p>
+      </div>
+
+    </div>
+
+    <!-- Zona de reseñas -->
+    <section class="reviews-section">
+      <h2>Las opiniones de nuestros clientes</h2>
+
+      <textarea id="reviewInput" rows="4" placeholder="Escribe tu opinión aquí..."></textarea>
+      <br />
+      <button id="submitReview">Enviar Opinión</button>
+
+      <table class="review-table">
+        <thead>
+          <tr>
+            <th>Opinión</th>
+            <th>Clasificación IA</th>
+          </tr>
+        </thead>
+        <tbody id="reviewTableBody">
+          <!-- Aquí se irán agregando las filas -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+
+  <div id="chatbot-bubble">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chatbot">
+  </div>
+  <div id="chatbot-window">
+    <div id="chatbot-header">Asistente de Cursos</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-quick-buttons" style="display: flex; gap: 8px; justify-content: center; margin: 8px 0;">
+      <button class="quick-btn" data-msg="Hola, necesito información de los cursos.">👋 Información de los
+        cursos</button>
+      <button class="quick-btn" data-msg="Eso es todo, gracias!">🙏 Eso es todo, gracias!</button>
+    </div>
+    <div id="chatbot-input-area">
+      <input id="chatbot-input" type="text" placeholder="Escribe tu pregunta...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
+
+
+  <script>
+    document.getElementById('submitReview').addEventListener('click', async () => {
+      const reviewText = document.getElementById('reviewInput').value.trim();
+      if (reviewText === '') return;
+
+      // Llama a la API Flask
+      const response = await fetch('http://localhost:5000/analizar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texto: reviewText })
+      });
+
+      let sentimiento = "Error";
+      if (response.ok) {
+        const data = await response.json();
+        sentimiento = data.sentimiento;
+      } else {
+        sentimiento = "Error al conectar con IA";
+      }
+
+      const table = document.getElementById('reviewTableBody');
+      const newRow = table.insertRow();
+      const cellReview = newRow.insertCell(0);
+      const cellClassification = newRow.insertCell(1);
+
+      cellReview.textContent = reviewText;
+      cellClassification.textContent = sentimiento;
+
+      document.getElementById('reviewInput').value = '';
+    });
+
+    // --- Chatbot ---
+    const bubble = document.getElementById('chatbot-bubble');
+    const windowChat = document.getElementById('chatbot-window');
+    const messages = document.getElementById('chatbot-messages');
+    const input = document.getElementById('chatbot-input');
+    const sendBtn = document.getElementById('chatbot-send');
+
+    bubble.onclick = () => {
+      windowChat.style.display = windowChat.style.display === 'flex' ? 'none' : 'flex';
+      windowChat.style.flexDirection = 'column';
+    };
+
+    sendBtn.onclick = enviarMensaje;
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensaje(); });
+
+    function agregarMensaje(texto, clase) {
+      const div = document.createElement('div');
+      div.className = clase;
+      div.textContent = texto;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function enviarMensaje() {
+      const texto = input.value.trim();
+      if (!texto) return;
+      agregarMensaje(texto, 'msg-user');
+      input.value = '';
+      fetch('http://localhost:5001/preguntar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texto: texto })
+      })
+        .then(r => r.json())
+        .then(data => agregarMensaje(data.respuesta, 'msg-bot'))
+        .catch(() => agregarMensaje('Error al conectar con el asistente.', 'msg-bot'));
+    }
+    // Botones rápidos para el chatbot
+    document.querySelectorAll('.quick-btn').forEach(btn => {
+      btn.onclick = () => {
+        input.value = btn.getAttribute('data-msg');
+        enviarMensaje();
+      };
+    });
+  </script>
+
 </body>
+
 </html>
