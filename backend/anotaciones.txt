@@ -1,0 +1,2 @@
+Tendrás en cuenta que los pdfs que generé tienen el contexto del proyecto, es decir, la pagina web
+si quieres generar más, debes pasarle ese contexto, porque no se puede entrenar con cualquier cosa.
