@@ -66,6 +66,17 @@ for ejemplo in dataset4["train"]:
     etiquetas.append(ejemplo["label"])  # 0 = negativo, 1 = positivo
 
 # ========== CARGAR DATOS DESDE PDF (opcional) ==========
+"""
+
+En este modelo no hace falta entrenar con PDFs, pero si se desea se pueden añadir opiniones de PDFs.
+Yo saque lod dataset para entrenar el modelo desde Hugging Face, pero si quieres se puede agregar PDFs 
+con contexto del proyecto.
+
+Pero no hace falta porque los dataset que traje desde HUgging Face son suficientes para que el modelo puede predecir
+si las opiniones son positivas o negativas.
+
+
+"""
 positivas_pdf = leer_reseñas_pdf("reseñas_positivas.pdf") + leer_reseñas_pdf("otras_positivas.pdf")
 negativas_pdf = leer_reseñas_pdf("reseñas_negativas.pdf") + leer_reseñas_pdf("otras_negativas.pdf")
 
