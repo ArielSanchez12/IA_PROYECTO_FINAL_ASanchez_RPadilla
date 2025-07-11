@@ -1,0 +1,328 @@
+input, button, textarea, select {
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #2c2c2c, #1b1b1b);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  min-height: 100vh;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === EFECTO GLOBAL DE ESCALA === */
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* === HEADER === */
+header {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-bottom: 2px solid #333;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* === BUSCADOR === */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 4px 0 0 4px;
+  background-color: #222;
+  color: #eee;
+}
+
+#searchBtn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #444;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#searchBtn:hover {
+  background-color: #888;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* === GRID DE CURSOS === */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #444;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  color: #ddd;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 5px 10px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+.price {
+  color: rgb(95, 143, 255);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.no-result {
+  text-align: center;
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  color: #ccc;
+  margin: 2px 0;
+}
+
+/* === RESEÑAS === */
+.reviews-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-top: 2px solid #333;
+}
+
+.reviews-section h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#reviewInput {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+#submitReview {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(95, 143, 255);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#submitReview:hover {
+  background-color: rgb(70, 120, 230);
+  transform: scale(1.05);
+}
+
+.review-table {
+  width: 80%;
+  margin: 30px auto 0 auto;
+  border-collapse: collapse;
+  color: #f0f0f0;
+  font-size: 16px;
+}
+
+.review-table th,
+.review-table td {
+  padding: 12px 16px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.review-table th {
+  background-color: #333;
+}
+
+.review-table td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* === BURBUJA DEL CHATBOT === */
+#chatbot-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: rgb(95, 143, 255);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+#chatbot-bubble:hover {
+  transform: scale(1.15);
+}
+
+#chatbot-bubble img {
+  width: 36px;
+  height: 36px;
+}
+
+/* === VENTANA DEL CHATBOT === */
+#chatbot-window {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 320px;
+  height: 420px;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #2c2c2c, #1b1b1b);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  flex-direction: column;
+  z-index: 1001;
+  overflow: hidden;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+#chatbot-header {
+  background: rgba(95, 143, 255, 0.2);
+  color: rgb(95, 143, 255);
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* === MENSAJES CHAT === */
+.msg-user, .msg-bot {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  display: inline-block;
+  position: relative;
+}
+
+.msg-user {
+  align-self: flex-end;
+  background-color: rgb(95, 143, 255);
+  color: #000;
+  border-bottom-right-radius: 4px;
+}
+
+.msg-bot {
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #eee;
+  border-bottom-left-radius: 4px;
+}
+
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #444;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#chatbot-input {
+  flex: 1;
+  border: 1px solid #555;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+#chatbot-send {
+  background: rgb(95, 143, 255);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  margin-left: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chatbot-send:hover {
+  background-color: rgb(70, 120, 230);
+  transform: scale(1.05);
+}
+
+.msg-user { text-align: right; margin: 6px 0; }
+.msg-bot { text-align: left; margin: 6px 0; color: #ffffff; }
