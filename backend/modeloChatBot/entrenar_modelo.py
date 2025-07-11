@@ -47,12 +47,12 @@ with open("config.json") as f:
 
 # Extraer datos de todos los PDFs
 faqs = []
-faqs += extraer_faq_desde_pdf("preguntas_respuestas_cursos_cocina.pdf")
-faqs += extraer_faq_desde_pdf("contexto_extra_cursos_chatbot.pdf")
-faqs += extraer_faq_desde_pdf("contexto_cursos_dos.pdf")
-faqs += extraer_faq_desde_pdf("faq_chatbot_jemplos.pdf")
-faqs += extraer_faq_desde_pdf("faq_chatbotpreguntas.pdf")
-faqs += extraer_faq_desde_pdf("contexto_gemini.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/preguntas_respuestas_cursos_cocina.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_extra_cursos_chatbot.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_cursos_dos.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/faq_chatbot_jemplos.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/faq_chatbotpreguntas.pdf")
+faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_gemini.pdf")
 # Agrega aquí más PDFs si tienes
 
 if not faqs:
