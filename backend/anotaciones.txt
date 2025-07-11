@@ -1,2 +1,7 @@
 Tendrás en cuenta que los pdfs que generé tienen el contexto del proyecto, es decir, la pagina web
 si quieres generar más, debes pasarle ese contexto, porque no se puede entrenar con cualquier cosa.
+
+
+Si quieres que funcione con otros tipos de contextos, debes generar mas pdfs o buscar datasets
+pero no te lo recomiendo porque yo estuve intentando y nada que me sale, mejor le deje el contexto
+del proyecto nomas para que no falle tanto.
