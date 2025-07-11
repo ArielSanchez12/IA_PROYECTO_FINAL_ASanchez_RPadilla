@@ -1,0 +1,5 @@
+{
+  "max_iter": 300,
+  "ngram_range": [1, 2],
+  "min_df": 1
+}
