@@ -1,3 +1,4 @@
+# antes de cambiar a la version del aula
 # PASO 1: config.json
 # PASO 2: entrenar_modelo.py
 import json
