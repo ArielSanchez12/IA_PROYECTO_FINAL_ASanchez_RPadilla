@@ -55,15 +55,6 @@ h1, h2 {
   color: #00bcd4;
 }
 
-
-
-
-
-
-
-
-
-
 /* === BUSCADOR === */
 .search-container {
   display: flex;
@@ -76,17 +67,17 @@ h1, h2 {
   padding: 10px;
   width: 50%;
   font-size: 16px;
-  border: 1px solid #555;
+  border: 1px solid #5c6bc0;
   border-radius: 4px 0 0 4px;
-  background-color: #222;
+  background-color: #1c1f2b;
   color: #eee;
 }
 
 #searchBtn {
   padding: 10px;
   font-size: 16px;
-  background-color: #444;
-  color: #eee;
+  background-color: #7c4dff;
+  color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 0 4px 4px 0;
@@ -95,10 +86,16 @@ h1, h2 {
 }
 
 #searchBtn:hover {
-  background-color: #888;
+  background-color: #03a9f4;
   color: #000;
   transform: scale(1.05);
 }
+
+
+
+
+
+
 
 /* === GRID DE CURSOS === */
 .grid-container {
@@ -109,13 +106,13 @@ h1, h2 {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 2px solid #444;
+  background-color: rgba(20, 30, 50, 0.6);
+  border: 1px solid #5c6bc0;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  color: #ddd;
+  color: #e0e0e0;
   transition: transform 0.2s ease;
 }
 
@@ -135,67 +132,98 @@ h1, h2 {
   color: #f5f5f5;
 }
 
-.price {
-  color: rgb(95, 143, 255);
+.card .subtitle {
+  text-align: left;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card .course-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 14px;
+}
+
+.card .price {
+  text-align: center;
+}
+
+.price {
+  color: #03a9f4;
+  margin-bottom: 10px;
+  font-size: 18 px;
 }
 
 .no-result {
   text-align: center;
   font-size: 1.2rem;
-  color: red;
+  color: #ff5555;
   margin-top: 20px;
 }
 
 .subtitle {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: normal;
   color: #ccc;
   margin: 2px 0;
 }
 
-/* === RESEÑAS === */
+/* === SECCIÓN DE RESEÑAS === */
 .reviews-section {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.04);
-  border-top: 2px solid #333;
+  margin-top: 60px;
+  padding: 30px;
+  border-top: 2px solid #5c6bc0;
+  border-radius: 16px;
+  text-align: center;
 }
 
-.reviews-section h2 {
-  color: #ffffff;
+h2 {
+  color: #00bcd4;
+  font-size: 35px;
+  font-weight: 600;
   margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
+
+/* Área de texto reseñas */
 #reviewInput {
-  width: 60%;
-  padding: 10px;
+  width: 80%;
+  padding: 12px 16px;
   font-size: 16px;
-  font-family: 'Segoe UI', sans-serif;
-  border: 1px solid #444;
-  border-radius: 6px;
-  background-color: #222;
+  border: 1px solid #5c6bc0;
+  border-radius: 10px;
+  background: rgba(28, 31, 43, 0.8);
   color: #f0f0f0;
+  backdrop-filter: blur(4px);
+  outline: none;
+  margin-bottom: 16px;
 }
 
+/* Botón enviar */
 #submitReview {
-  margin-top: 10px;
-  padding: 10px 20px;
+  padding: 10px 24px;
   font-size: 16px;
-  background-color: rgb(95, 143, 255);
-  color: #000;
+  background-color: #7c4dff;
+  color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #submitReview:hover {
-  background-color: rgb(70, 120, 230);
+  background-color: #03a9f4;
   transform: scale(1.05);
 }
+
+
+
 
 .review-table {
   width: 80%;
