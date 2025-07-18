@@ -91,12 +91,6 @@ h1, h2 {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
 /* === GRID DE CURSOS === */
 .grid-container {
   display: grid;
@@ -283,38 +277,36 @@ h2 {
   object-fit: cover;
 }
 
-
-
-
 /* === VENTANA DEL CHATBOT === */
 #chatbot-window {
   display: none;
   position: fixed;
-  bottom: 90px;
-  right: 24px;
-  width: 320px;
-  height: 420px;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #2c2c2c, #1b1b1b);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
+  bottom: 145px;
+  right: 30px;
+  width: 360px;
+  height: 500px;
+  background: rgba(20, 30, 50, 0.95); /* Más oscuro, combina con el fondo */
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.6);
   flex-direction: column;
   z-index: 1001;
   overflow: hidden;
   color: #f0f0f0;
-  border: 1px solid #444;
+  border: 1px solid #00bcd4; /* Color principal */
 }
 
+/* Header del chatbot */
 #chatbot-header {
-  background: rgba(95, 143, 255, 0.2);
-  color: rgb(95, 143, 255);
-  padding: 12px;
+  background: rgba(0, 188, 212, 0.2); /* azul semi transparente */
+  color: #ffffff;
+  padding: 15px;
   font-weight: bold;
   text-align: center;
-  border-bottom: 1px solid #333;
+  font-size: 20px;
+  border-bottom: 1px solid #00bcd4;
 }
 
+/* Área de mensajes */
 #chatbot-messages {
   flex: 1;
   padding: 12px;
@@ -325,7 +317,7 @@ h2 {
   gap: 8px;
 }
 
-/* === MENSAJES CHAT === */
+/* Burbujas de mensaje */
 .msg-user, .msg-bot {
   max-width: 80%;
   padding: 10px 14px;
@@ -337,55 +329,86 @@ h2 {
   position: relative;
 }
 
+/* Mensaje del usuario */
 .msg-user {
   align-self: flex-end;
-  background-color: rgb(95, 143, 255);
+  background-color: #00bcd4;
   color: #000;
   border-bottom-right-radius: 4px;
+  text-align: right;
 }
 
+/* Mensaje del bot */
 .msg-bot {
   align-self: flex-start;
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #eee;
+  background-color: rgba(124, 77, 255, 0.25);
+  color: #e0e0e0;
   border-bottom-left-radius: 4px;
+  text-align: left;
 }
 
+/* Área de entrada de texto */
 #chatbot-input-area {
   display: flex;
-  border-top: 1px solid #444;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid #00bcd4;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.02);
 }
 
+/* Input de texto */
 #chatbot-input {
   flex: 1;
-  border: 1px solid #555;
+  border: 1px solid #5c6bc0;
   padding: 8px;
   border-radius: 6px;
   font-size: 15px;
   outline: none;
-  background-color: #222;
+  background-color: #1c1f2b;
   color: #f0f0f0;
 }
 
+/* Botón de enviar */
 #chatbot-send {
-  background: rgb(95, 143, 255);
-  color: #000;
+  background: #7c4dff;
+  color: #fff;
   border: none;
   border-radius: 6px;
   margin-left: 8px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 #chatbot-send:hover {
-  background-color: rgb(70, 120, 230);
+  background-color: #03a9f4;
   transform: scale(1.05);
 }
 
-.msg-user { text-align: right; margin: 6px 0; }
-.msg-bot { text-align: left; margin: 6px 0; color: #ffffff; }
+/* Botones rápidos */
+.quick-btn {
+  display: inline-block;
+  background-color: #7c4dff;
+  color: #fff;
+  border: 1px solid #5c6bc0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 4px auto;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+/* Centrarlos mejor */
+#chatbot-messages .quick-btn {
+  align-self: center;
+}
+
+.quick-btn:hover {
+  background-color: #03a9f4;
+  transform: scale(1.05);
+}
