@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cursos de cocina</title>
-  <link rel="stylesheet" href="stylecursoscocina.css"/>
+  <link rel="stylesheet" href="stylecursoscocina.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <header>
     <h1>BIENVENIDO A COOKING COURSES</h1>
+    <p style="max-width: 900px; margin: auto; padding: 20px 20px;">
+      <strong>CURSOS DE COCINA</strong><br>
+      En nuestra Escuela de Cocina ofrecemos una amplia variedad de cursos de cocina. Tanto si eres un aficionado a la
+      cocina como un experto cocinero nuestros talleres de cocina son ideales para ti. Mejorarás tus conocimientos
+      gastronómicos, recetas y técnicas culinarias y pasarás un rato muy divertido.<br><br>
+      Por eso, en nuestros talleres de cocina, aprenderás no solo a preparar deliciosos platos sino también a emplatar
+      tus creaciones culinarias. Nuestros chefs expertos te ayudarán a preparar cada receta, te animarán a participar y
+      a practicar en todo momento.<br><br>
+      ¿A qué esperas para disfrutar de una inolvidable y divertida experiencia gastronómica en Food&Fun?
+    </p>
   </header>
 
   <main>
+    <h2>Todos nuestros talleres de cocina</h2>
     <div id="cardContainer" class="grid-container">
 
       <div class="card">
         <img src="https://media.slidesgo.com/storage/21467884/conversions/0-fast-food-digital-menu-board-thumb.jpg"
           alt="Curso Comida Rápida">
-        <p>Curso de Comida Rápida</p>
+        <p class="course-title">Curso de Comida Rápida</p>
         <p class="subtitle">🍕 Aprende a preparar Pizza</p>
         <p class="subtitle">🍔 Técnicas para preparar Hamburguesas</p>
         <p class="subtitle">🍟 Papas fritas crocantes</p>
@@ -30,8 +40,8 @@
       <div class="card">
         <img
           src="https://img.freepik.com/vector-premium/comida-mexicana-borde-horizontal-costuras-platos-tradicionales-latinoamericanos-sobre-fondo-negro_248911-1590.jpg"
-          alt="Curso Comida Rápida">
-        <p>Curso de Comida Mexicana</p>
+          alt="Curso Comida Mexicana">
+        <p class="course-title">Curso de Comida Mexicana</p>
         <p class="subtitle">🌮 Aprende a preparar Tacos</p>
         <p class="subtitle">🌯 Técnicas para preparar Burritos</p>
         <p class="subtitle">🥑 Receta para preparar Guacamole</p>
@@ -40,8 +50,8 @@
 
       <div class="card">
         <img src="https://www.shutterstock.com/image-vector/horizontal-fast-food-design-vintage-260nw-1166136202.jpg"
-          alt="Curso Comida Rápida">
-        <p>Curso de Comida Italiana</p>
+          alt="Curso Comida Italiana">
+        <p class="course-title">Curso de Comida Italiana</p>
         <p class="subtitle">🍝 Aprende a preparar Pasta</p>
         <p class="subtitle">🍕 Técnicas para preparar Calzone</p>
         <p class="subtitle">🥗 Receta para preparar Ensalada Caprese</p>
@@ -51,8 +61,8 @@
       <div class="card">
         <img
           src="https://png.pngtree.com/png-clipart/20230813/original/pngtree-restaurant-menu-featuring-american-cuisine-on-a-white-wooden-table-top-png-image_10338186.png"
-          alt="Curso Comida Rápida">
-        <p>Curso de Comida Americana</p>
+          alt="Curso Comida Americana">
+        <p class="course-title">Curso de Comida Americana</p>
         <p class="subtitle">🍗 Aprende a preparar Alitas</p>
         <p class="subtitle">🍔 Técnicas para preparar Hamburguesas Dobles</p>
         <p class="subtitle">🥤 Aprende a hacer Jugos, Milkshakes o Cocteles</p>
@@ -61,8 +71,8 @@
 
       <div class="card">
         <img src="https://www.shutterstock.com/image-vector/vegan-organic-food-restaurant-menu-260nw-380472238.jpg"
-          alt="Curso Comida Rápida">
-        <p>Curso de Comida Vegetariana</p>
+          alt="Curso Comida Vegetariana">
+        <p class="course-title">Curso de Comida Vegetariana</p>
         <p class="subtitle">🥙 Aprende a preparar Falafel</p>
         <p class="subtitle">🥗 Técnicas para preparar Ensalada griega</p>
         <p class="subtitle">🧃 Aprende a preparar Jugos o Zumos naturales</p>
@@ -72,20 +82,19 @@
       <div class="card">
         <img
           src="https://img.freepik.com/vector-premium/banner-comida-asiatica-primer-plano-plato-oriental-tradicional-plantas-sushi-restaurante-vector_653547-617.jpg"
-          alt="Curso Comida Rápida">
-        <p>Curso de Comida Asiática</p>
+          alt="Curso Comida Asiática">
+        <p class="course-title">Curso de Comida Asiática</p>
         <p class="subtitle">🍜 Aprende a preparar Ramen</p>
         <p class="subtitle">🍣 Técnicas para preparar Sushi</p>
-        <p class="subtitle">🥟 Recetas para preprar empanadas Gyozas</p>
+        <p class="subtitle">🥟 Recetas para preparar empanadas Gyozas</p>
         <p class="price">💵 $114.99</p>
       </div>
 
     </div>
 
-    <!-- Zona de reseñas -->
+    <!-- Sección de reseñas -->
     <section class="reviews-section">
       <h2>Las opiniones de nuestros clientes</h2>
-
       <textarea id="reviewInput" rows="4" placeholder="Escribe tu opinión aquí..."></textarea>
       <br />
       <button id="submitReview">Enviar Opinión</button>
@@ -98,23 +107,22 @@
           </tr>
         </thead>
         <tbody id="reviewTableBody">
-          <!-- Aquí se irán agregando las filas -->
+          <!-- Opiniones se insertan dinámicamente -->
         </tbody>
       </table>
     </section>
-
   </main>
 
-
+  <!-- Chatbot UI -->
   <div id="chatbot-bubble">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chatbot">
+    <img src="https://media.giphy.com/media/u2pmTWUi0MXjyrMaVj/giphy.gif" alt="Chatbot Futurista">
   </div>
+
   <div id="chatbot-window">
     <div id="chatbot-header">Asistente de Cursos</div>
     <div id="chatbot-messages"></div>
-    <div id="chatbot-quick-buttons" style="display: flex; gap: 8px; justify-content: center; margin: 8px 0;">
-      <button class="quick-btn" data-msg="Hola, necesito información de los cursos.">👋 Información de los
-        cursos</button>
+    <div id="chatbot-quick-buttons" style="display: flex; gap: 8px; justify-content: center; margin: 7px 0;">
+      <button class="quick-btn" data-msg="Hola, necesito información de los cursos.">👋 Información de los cursos</button>
       <button class="quick-btn" data-msg="Eso es todo, gracias!">🙏 Eso es todo, gracias!</button>
     </div>
     <div id="chatbot-input-area">
@@ -123,14 +131,12 @@
     </div>
   </div>
 
-
-
+  <!-- Script para opiniones y chatbot -->
   <script>
     document.getElementById('submitReview').addEventListener('click', async () => {
       const reviewText = document.getElementById('reviewInput').value.trim();
       if (reviewText === '') return;
 
-      // Llama a la API Flask
       const response = await fetch('http://localhost:5000/analizar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -156,7 +162,6 @@
       document.getElementById('reviewInput').value = '';
     });
 
-    // --- Chatbot ---
     const bubble = document.getElementById('chatbot-bubble');
     const windowChat = document.getElementById('chatbot-window');
     const messages = document.getElementById('chatbot-messages');
@@ -193,7 +198,7 @@
         .then(data => agregarMensaje(data.respuesta, 'msg-bot'))
         .catch(() => agregarMensaje('Error al conectar con el asistente.', 'msg-bot'));
     }
-    // Botones rápidos para el chatbot
+
     document.querySelectorAll('.quick-btn').forEach(btn => {
       btn.onclick = () => {
         input.value = btn.getAttribute('data-msg');
@@ -201,7 +206,5 @@
       };
     });
   </script>
-
 </body>
-
 </html>
