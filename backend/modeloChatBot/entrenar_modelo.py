@@ -24,7 +24,7 @@ def extraer_faq_desde_pdf(ruta):
             partes = bloque.split("Respuesta:")
             pregunta = partes[0].strip()
             respuesta = partes[1].strip()
-            respuesta = re.sub(r'\s*\d+\.*\s*$', '', respuesta)
+            respuesta = re.sub(r'\s*\d+\.\s$', '', respuesta)
             if pregunta and respuesta:
                 faqs.append((pregunta, respuesta))
     return faqs
@@ -47,12 +47,15 @@ with open("config.json") as f:
 
 # Extraer datos de todos los PDFs
 faqs = []
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/preguntas_respuestas_cursos_cocina.pdf")
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_extra_cursos_chatbot.pdf")
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_cursos_dos.pdf")
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/faq_chatbot_jemplos.pdf")
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/faq_chatbotpreguntas.pdf")
-faqs += extraer_faq_desde_pdf("./pdfs_para_entrenar/contexto_gemini.pdf")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PDF_DIR = os.path.join(BASE_DIR, "pdfs_para_entrenar")
+
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "preguntas_respuestas_cursos_cocina.pdf"))
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "contexto_extra_cursos_chatbot.pdf"))
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "contexto_cursos_dos.pdf"))
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "faq_chatbot_jemplos.pdf"))
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "faq_chatbotpreguntas.pdf"))
+faqs += extraer_faq_desde_pdf(os.path.join(PDF_DIR, "contexto_gemini.pdf"))
 # Agrega aquí más PDFs si tienes
 
 if not faqs:
