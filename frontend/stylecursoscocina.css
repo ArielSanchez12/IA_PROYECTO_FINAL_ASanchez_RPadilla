@@ -1,16 +1,19 @@
+/* === FUENTE GLOBAL === */
 input, button, textarea, select {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #2c2c2c, #1b1b1b);
-  background-size: 400% 400%;
-  animation: gradientBG 20s ease infinite;
+  background: url('https://giffiles.alphacoders.com/213/213164.gif') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
   text-align: center;
-  color: #f0f0f0;
+  color: #e0e0e0;
+  position: relative;
+  font-size: 25px;
 }
 
 @keyframes gradientBG {
