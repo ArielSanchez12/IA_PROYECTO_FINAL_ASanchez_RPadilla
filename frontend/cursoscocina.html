@@ -134,80 +134,88 @@
 
 
   
-  <!-- Script para opiniones y chatbot -->
   <script>
-    document.getElementById('submitReview').addEventListener('click', async () => {
-      const reviewText = document.getElementById('reviewInput').value.trim();
-      if (reviewText === '') return;
+  // === ENVÍO Y ANÁLISIS DE OPINIONES ===
+  document.getElementById('submitReview').addEventListener('click', async () => {
+    const reviewText = document.getElementById('reviewInput').value.trim();  // Obtener texto de la reseña
+    if (reviewText === '') return;  // Evitar enviar si está vacío
 
-      const response = await fetch('http://localhost:5000/analizar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texto: reviewText })
-      });
-
-      let sentimiento = "Error";
-      if (response.ok) {
-        const data = await response.json();
-        sentimiento = data.sentimiento;
-      } else {
-        sentimiento = "Error al conectar con IA";
-      }
-
-      const table = document.getElementById('reviewTableBody');
-      const newRow = table.insertRow();
-      const cellReview = newRow.insertCell(0);
-      const cellClassification = newRow.insertCell(1);
-
-      cellReview.textContent = reviewText;
-      cellClassification.textContent = sentimiento;
-
-      document.getElementById('reviewInput').value = '';
+    // Enviar la reseña a la API de clasificador de opiniones
+    const response = await fetch('http://localhost:5000/analizar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ texto: reviewText })
     });
 
-    const bubble = document.getElementById('chatbot-bubble');
-    const windowChat = document.getElementById('chatbot-window');
-    const messages = document.getElementById('chatbot-messages');
-    const input = document.getElementById('chatbot-input');
-    const sendBtn = document.getElementById('chatbot-send');
+    let sentimiento = "Error";
+    if (response.ok) {
+      const data = await response.json();  // Obtener respuesta del modelo
+      sentimiento = data.sentimiento;  // Positiva o Negativa
+    } else {
+      sentimiento = "Error al conectar con IA";  // Error de red/API (cuando no se ha podido acceder al servicio de la api)
+    }
 
-    bubble.onclick = () => {
-      windowChat.style.display = windowChat.style.display === 'flex' ? 'none' : 'flex';
-      windowChat.style.flexDirection = 'column';
+    // Insertar la reseña y su clasificación en la tabla de la interfaz
+    const table = document.getElementById('reviewTableBody');
+    const newRow = table.insertRow();
+    const cellReview = newRow.insertCell(0);
+    const cellClassification = newRow.insertCell(1);
+    cellReview.textContent = reviewText;
+    cellClassification.textContent = sentimiento;
+
+    document.getElementById('reviewInput').value = '';  // Limpiar el textarea
+  });
+
+  // === CHATBOT ===
+  const bubble = document.getElementById('chatbot-bubble');  // Botón flotante (burbuja)
+  const windowChat = document.getElementById('chatbot-window');  // Ventana del chat
+  const messages = document.getElementById('chatbot-messages');  // Contenedor de mensajes
+  const input = document.getElementById('chatbot-input');  // Campo de entrada de texto
+  const sendBtn = document.getElementById('chatbot-send');  // Botón de enviar mensaje
+
+  // Mostrar u ocultar la ventana del chatbot al hacer clic en la burbuja
+  bubble.onclick = () => {
+    windowChat.style.display = windowChat.style.display === 'flex' ? 'none' : 'flex';
+    windowChat.style.flexDirection = 'column';
+  };
+
+  // Configurar envío de mensaje al hacer clic o presionar Enter
+  sendBtn.onclick = enviarMensaje;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensaje(); });
+
+  // Función para agregar un mensaje al historial de chat
+  function agregarMensaje(texto, clase) {
+    const div = document.createElement('div');
+    div.className = clase;  // Clase CSS para msg-user o msg-bot
+    div.textContent = texto;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;  // Desplazar al último mensaje
+  }
+
+  // Función para enviar mensaje al chatbot (API en puerto 5001)
+  function enviarMensaje() {
+    const texto = input.value.trim();
+    if (!texto) return;  // No hacer nada si está vacío
+    agregarMensaje(texto, 'msg-user');  // Mostrar mensaje del usuario
+    input.value = '';  // Limpiar campo
+
+    fetch('http://localhost:5001/preguntar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ texto: texto })
+    })
+      .then(r => r.json())
+      .then(data => agregarMensaje(data.respuesta, 'msg-bot'))  // Mostrar respuesta del bot
+      .catch(() => agregarMensaje('Error al conectar con el asistente.', 'msg-bot'));  // Error de red
+  }
+
+  // === BOTONES RÁPIDOS (atajos predefinidos para el usuario) ===
+  document.querySelectorAll('.quick-btn').forEach(btn => {
+    btn.onclick = () => {
+      input.value = btn.getAttribute('data-msg');  // Insertar mensaje predefinido
+      enviarMensaje(); 
     };
-
-    sendBtn.onclick = enviarMensaje;
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') enviarMensaje(); });
-
-    function agregarMensaje(texto, clase) {
-      const div = document.createElement('div');
-      div.className = clase;
-      div.textContent = texto;
-      messages.appendChild(div);
-      messages.scrollTop = messages.scrollHeight;
-    }
-
-    function enviarMensaje() {
-      const texto = input.value.trim();
-      if (!texto) return;
-      agregarMensaje(texto, 'msg-user');
-      input.value = '';
-      fetch('http://localhost:5001/preguntar', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texto: texto })
-      })
-        .then(r => r.json())
-        .then(data => agregarMensaje(data.respuesta, 'msg-bot'))
-        .catch(() => agregarMensaje('Error al conectar con el asistente.', 'msg-bot'));
-    }
-
-    document.querySelectorAll('.quick-btn').forEach(btn => {
-      btn.onclick = () => {
-        input.value = btn.getAttribute('data-msg');
-        enviarMensaje();
-      };
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
