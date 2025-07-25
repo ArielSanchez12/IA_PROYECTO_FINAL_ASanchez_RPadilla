@@ -112,6 +112,4 @@ Puedes encontrar el informe técnico completo en la carpeta docs/ o como anexo e
 
 ✅ Gracias por probar Cooking Courses: aprende, pregunta y mejora tu experiencia educativa con IA 🌟
 
----
-
 
