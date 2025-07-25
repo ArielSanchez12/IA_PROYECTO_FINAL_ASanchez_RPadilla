@@ -137,6 +137,15 @@ Puedes encontrar el informe técnico completo dentro del respositorio mismo.
 
 ---
 
+## 🧠 Presentacion
+
+Disponible en:
+
+En esta presentacion se hablara sobre nuestros objetivos con este proyecto y como funciona el sistema.
+
+---
+
+
 ✅ Gracias por probar Cooking Courses: aprende, pregunta y mejora tu experiencia educativa con IA 🌟
 
 
