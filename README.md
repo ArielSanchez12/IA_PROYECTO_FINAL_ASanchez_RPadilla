@@ -37,7 +37,7 @@ Ambos componentes están integrados en una interfaz visual desarrollada con HTML
 
 ---
 
-## 🚀 Instrucciones para Ejecutar el Sistema
+## Instrucciones para Ejecutar el Sistema 🚀
 
 ### 1. Clonar el repositorio  
 
@@ -102,15 +102,13 @@ cursoscocina.html y ejecutamos con open with live server
 
 ### ✅ Opción 1: Ejecución Local (Modo Desarrollo)
 
-Dirígete a la sección 👉 [🚀 Instrucciones para Ejecutar el Sistema](#instrucciones-para-ejecutar-el-sistema)
+Dirígete a la sección 👉 [Instrucciones para Ejecutar el Sistema](#instrucciones-para-ejecutar-el-sistema-)
 
 ### ✅ Opción 2: Despliegue en la Web
 
 Enlace: _(aquí colocarás la URL)_
 
 ---
-
-
 
 ## 🎥 Video Explicativo del Proyecto
 
