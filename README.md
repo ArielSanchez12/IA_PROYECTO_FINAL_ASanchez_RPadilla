@@ -98,6 +98,20 @@ cursoscocina.html y ejecutamos con open with live server
 
 ---
 
+## 📦 Despliegue del Proyecto 
+
+### ✅ Opción 1: Ejecución Local (Modo Desarrollo)
+
+Dirígete a la sección 👉 [🚀 Instrucciones para Ejecutar el Sistema](#instrucciones-para-ejecutar-el-sistema)
+
+### ✅ Opción 2: Despliegue en la Web
+
+Enlace: _(aquí colocarás la URL)_
+
+---
+
+
+
 ## 🎥 Video Explicativo del Proyecto
 
 Disponible en: https://youtu.be/ejemplo-enlace-video En este video se explica paso a paso el código, entrenamiento, integración y uso del sistema completo.
