@@ -125,13 +125,15 @@ Enlace: _(aquí colocarás la URL)_
 
 ## 🎥 Video Explicativo del Proyecto
 
-Disponible en: https://youtu.be/ejemplo-enlace-video En este video se explica paso a paso el código, entrenamiento, integración y uso del sistema completo.
+Disponible en: https://youtu.be/ejemplo-enlace-video 
+
+En este video se explica paso a paso el código, entrenamiento, integración y uso del sistema completo.
 
 ---
 
 ## 📚 Documentación
 
-Puedes encontrar el informe técnico completo en la carpeta docs/ o como anexo en la plataforma de entrega.
+Puedes encontrar el informe técnico completo dentro del respositorio mismo.
 
 ---
 
