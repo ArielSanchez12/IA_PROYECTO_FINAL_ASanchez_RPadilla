@@ -75,7 +75,7 @@ python api_chatbot.py
 
 ### 4. Ejecutar la interfaz (frontend)
 
-cd frontend/cursoscocina.html y ejecutamos con open with live server 
+cd frontend/cursoscocina.html y ejecutamos con open with `Live Server`.
 
 ---------------------------------------------------------------------------------------------------------------
 
