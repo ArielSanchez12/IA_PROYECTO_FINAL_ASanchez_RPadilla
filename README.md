@@ -95,7 +95,7 @@ cd frontend/cursoscocina.html y ejecutamos con open with live server
 
 - Estructura del proyecto:
 
-<img width="320" height="309" alt="image" src="https://github.com/user-attachments/assets/39e158f7-12a1-4bb0-9e68-b9772788ae54" />
+<img width="317" height="756" alt="image" src="https://github.com/user-attachments/assets/06c1e4f6-0544-438d-840d-3bcf76f9a5a5" />
 
 ---
 
