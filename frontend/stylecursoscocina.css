@@ -3,6 +3,7 @@ input, button, textarea, select {
   font-family: 'Rajdhani', sans-serif;
 }
 
+
 body {
   font-family: 'Rajdhani', sans-serif;
   margin: 0;
@@ -94,7 +95,7 @@ h1, h2 {
 /* === GRID DE CURSOS === */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 30px;
 }
@@ -148,7 +149,7 @@ h1, h2 {
 .price {
   color: #03a9f4;
   margin-bottom: 10px;
-  font-size: 18 px;
+  font-size: 18px;
 }
 
 .no-result {
@@ -411,4 +412,82 @@ h2 {
 .quick-btn:hover {
   background-color: #03a9f4;
   transform: scale(1.05);
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  #searchInput {
+    width: 70%;
+    font-size: 14px;
+  }
+
+  #searchBtn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .reviews-section {
+    padding: 20px;
+  }
+
+  #reviewInput {
+    width: 100%;
+  }
+
+  .review-table th, .review-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #chatbot-window {
+    width: 95%;
+    right: 2.5%;
+    bottom: 110px;
+    height: 420px;
+  }
+
+  #chatbot-bubble {
+    width: 65px;
+    height: 65px;
+  }
+
+  #chatbot-bubble img {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card .subtitle, .card .price, .card .course-title {
+    font-size: 15px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  #chatbot-input {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  #chatbot-send {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .quick-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }
