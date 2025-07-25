@@ -35,8 +35,8 @@ with open("config.json") as f:
 inicio = time.time()
 
 # ===== CARGAR DATOS DESDE HUGGING FACE =====
-print("Cargando datasets desde Hugging Face (máx 500,000 registros en total)...")
-MAX_REGISTROS = 500_000  # Límite para evitar exceso de RAM
+print("Cargando datasets desde Hugging Face (máx 9,500 registros en total)...")
+MAX_REGISTROS = 9_500  # Límite para evitar exceso de RAM
 textos = []  # Lista de textos
 etiquetas = []  # Lista de etiquetas (0 = negativa, 1 = positiva)
 total = 0

@@ -141,7 +141,7 @@
     if (reviewText === '') return;  // Evitar enviar si está vacío
 
     // Enviar la reseña a la API de clasificador de opiniones
-    const response = await fetch('http://localhost:5000/analizar', {
+    const response = await fetch('https://modeloopiniones.onrender.com/analizar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ texto: reviewText })
@@ -199,7 +199,7 @@
     agregarMensaje(texto, 'msg-user');  // Mostrar mensaje del usuario
     input.value = '';  // Limpiar campo
 
-    fetch('http://localhost:5001/preguntar', {
+    fetch('https://modelochatbot.onrender.com/preguntar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ texto: texto })
