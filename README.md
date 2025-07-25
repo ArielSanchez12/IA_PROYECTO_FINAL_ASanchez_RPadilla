@@ -41,7 +41,7 @@ Ambos componentes están integrados en una interfaz visual desarrollada con HTML
 
 ### 1. Clonar el repositorio  
 
-git clone 
+git clone https://github.com/ArielSanchez12/IA_PROYECTO_FINAL_ASanchez_RPadilla.git
 
 ### 2. Instalar dependencias
 
@@ -107,22 +107,6 @@ Disponible en: https://youtu.be/ejemplo-enlace-video En este video se explica pa
 ## 📚 Documentación
 
 Puedes encontrar el informe técnico completo en la carpeta docs/ o como anexo en la plataforma de entrega.
-
----
-
-## 🙌 Autores
-
-Este proyecto fue desarrollado como parte de la asignatura Fundamentos de Inteligencia Artificial en la Escuela Politécnica Nacional:
-
-Richard Padilla
-
-Ariel Sánchez
-
----
-
-## 🚧 Licencia
-
-Este proyecto es académico. No se autoriza su uso con fines comerciales.
 
 ---
 
