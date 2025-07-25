@@ -59,6 +59,8 @@ python entrenar_modelo.py
 cd backend/modeloChatbot:
 python entrenar_modelo.py
 
+## ⚠️ Esto puede demorar dependiendo de cuantos datos cargados este entrenando asi que tomara tiempo.
+
 ### 3. Ejecutar las APIs (en terminales separadas)
 
 - API de Análisis de Sentimientos
