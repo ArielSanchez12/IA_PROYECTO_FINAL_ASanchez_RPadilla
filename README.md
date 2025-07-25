@@ -59,7 +59,7 @@ python entrenar_modelo.py
 cd backend/modeloChatbot:
 python entrenar_modelo.py
 
-⚠️ Esto puede demorar dependiendo de cuantos datos cargados este entrenando asi que tomara tiempo.
+`⚠️ Esto puede demorar dependiendo de cuántos datos cargados esté entrenando, así que tomará tiempo.`
 
 ### 3. Ejecutar las APIs (en terminales separadas)
 
@@ -113,7 +113,7 @@ cd frontend/cursoscocina.html y ejecutamos con open with live server
 
 ## 📦 Despliegue del Proyecto 
 
-### ✅ Opción 1: Ejecución Local (Modo Desarrollo)
+### ✅ Opción 1: Ejecución Local
 
 Dirígete a la sección 👉 [Instrucciones para Ejecutar el Sistema](#instrucciones-para-ejecutar-el-sistema-)
 
