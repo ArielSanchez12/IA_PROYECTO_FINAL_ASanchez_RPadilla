@@ -47,6 +47,18 @@ git clone https://github.com/ArielSanchez12/IA_PROYECTO_FINAL_ASanchez_RPadilla.
 
 pip install scikit-learn matplotlib seaborn datasets pymupdf tqdm pandas
 
+### 3.- Entrenar modelos (Terminales separadas)
+
+- Analisis de sentimientos
+
+cd backend/modeloOpiniones
+python entrenar_modelo.py
+
+- Chatbot
+
+cd backend/modeloChatbot
+python entrenar_modelo.py
+
 ### 3. Ejecutar las APIs (en terminales separadas)
 
 - API de Análisis de Sentimientos
