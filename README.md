@@ -139,7 +139,7 @@ Puedes encontrar el informe técnico completo dentro del respositorio mismo.
 
 ## 🧠 Presentacion
 
-Disponible en:
+Disponible en: https://youtu.be/8hOE3q9i1Hk 
 
 En esta presentacion se hablara sobre nuestros objetivos con este proyecto y como funciona el sistema.
 
