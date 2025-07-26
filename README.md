@@ -121,6 +121,8 @@ Dirígete a la sección 👉 [Instrucciones para Ejecutar el Sistema](#instrucci
 
 Enlace: https://proyectofinal-ia-asanchez-rpadilla.netlify.app 
 
+`⚠️ Puede demorarse 1 o 2 minutos en activarse las APIs debido al plan gratis de Render`
+
 ---
 
 ## 🎥 Video Explicativo del Proyecto
