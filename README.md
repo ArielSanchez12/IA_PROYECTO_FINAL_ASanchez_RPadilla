@@ -119,13 +119,13 @@ Dirígete a la sección 👉 [Instrucciones para Ejecutar el Sistema](#instrucci
 
 ### ✅ Opción 2: Despliegue en la Web
 
-Enlace: _(aquí colocarás la URL)_
+Enlace: https://proyectofinal-ia-asanchez-rpadilla.netlify.app 
 
 ---
 
 ## 🎥 Video Explicativo del Proyecto
 
-Disponible en: https://youtu.be/ejemplo-enlace-video 
+Disponible en: 
 
 En este video se explica paso a paso el código, entrenamiento, integración y uso del sistema completo.
 
