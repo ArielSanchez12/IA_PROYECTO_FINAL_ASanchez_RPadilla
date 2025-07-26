@@ -135,7 +135,7 @@ En este video se explica paso a paso el código, entrenamiento, integración y u
 
 ## 📚 Documentación
 
-Puedes encontrar el informe técnico completo dentro del respositorio mismo.
+Puedes encontrar el completo dentro del respositorio mismo.
 
 ---
 
