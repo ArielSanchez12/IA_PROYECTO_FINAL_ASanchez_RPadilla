@@ -135,7 +135,7 @@ En este video se explica paso a paso el código, entrenamiento, integración y u
 
 ## 📚 Documentación
 
-Puedes encontrar el completo dentro del respositorio mismo.
+Puedes ver el archivo completo en este [📄 PDF del proyecto](./DOCUMENTACION%20DEL%20PROYECTO%20FINAL%20-%20RPadilla%20-%20ASanchez.pdf).
 
 ---
 
