@@ -125,7 +125,7 @@ Enlace: https://proyectofinal-ia-asanchez-rpadilla.netlify.app
 
 ## 🎥 Video Explicativo del Proyecto
 
-Disponible en: 
+Disponible en: https://youtu.be/8hOE3q9i1Hk 
 
 En este video se explica paso a paso el código, entrenamiento, integración y uso del sistema completo.
 
@@ -139,7 +139,7 @@ Puedes encontrar el informe técnico completo dentro del respositorio mismo.
 
 ## 🧠 Presentacion
 
-Disponible en: https://youtu.be/8hOE3q9i1Hk 
+Disponible en: https://www.canva.com/design/DAGuOL1uLpw/r90Rrw3jdXPz8uAO89t8OQ/view?utm_content=DAGuOL1uLpw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3b9fa76d59
 
 En esta presentacion se hablara sobre nuestros objetivos con este proyecto y como funciona el sistema.
 
