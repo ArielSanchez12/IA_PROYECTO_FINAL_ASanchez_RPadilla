@@ -53,11 +53,13 @@ pip install scikit-learn matplotlib seaborn datasets pymupdf tqdm pandas
 
 cd backend/modeloOpiniones:
 python entrenar_modelo.py
+modelo ya entrenado: https://github.com/ArielSanchez12/modeloOpiniones.git
 
 - Chatbot
 
 cd backend/modeloChatbot:
 python entrenar_modelo.py
+modelo ya entrenado: https://github.com/ArielSanchez12/modeloChatBot.git
 
 `⚠️ Esto puede demorar dependiendo de cuántos datos cargados esté entrenando, así que tomará tiempo.`
 
